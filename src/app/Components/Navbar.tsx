@@ -39,12 +39,12 @@ export default function Navbar() {
         {/* Main Links */}
         <div className="hidden md:flex">
           <ul className="flex gap-5">
-            <Link href={"/"}>New & Featured</Link>
-            <Link href={"/"}>Men</Link>
-            <Link href={"/"}>Women</Link>
-            <Link href={"/"}>Kids</Link>
-            <Link href={"/"}>Sales</Link>
-            <Link href={"/"}>SNKRS</Link>
+            <Link href={"/"}>Home</Link>
+            <Link href={"/products"}>Men</Link>
+            <Link href={"/products"}>Women</Link>
+            <Link href={"/products"}>Kids</Link>
+            <Link href={"/products"}>Sales</Link>
+            <Link href={"/products"}>Products</Link>
           </ul>
         </div>
 
