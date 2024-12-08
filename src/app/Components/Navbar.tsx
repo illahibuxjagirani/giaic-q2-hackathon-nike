@@ -3,22 +3,21 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="">
+    <header className="w-full sticky top-0 z-40">
 
-      {/* 1st header div: Contains the top bar with logo and navigation links */}
-      <div className="px-[50px] bg-[#F5F5F5] flex justify-between h-[36px] items-center">
+      {/* 1st Header Div: Top Bar */}
+      <div className="px-4 md:px-[50px] bg-[#F5F5F5] flex justify-between h-[36px] items-center">
 
-        {/* Left div: Displays the main logo */}
+        {/* Logo Section */}
         <div>
           <Link href={"/"}>
             <Image src="/logo1.png" alt="Logo1" width={24} height={24} />
           </Link>
         </div>
 
-        {/* Right div: Contains navigation links like "Find a Store", "Help", etc. */}
-        <div className="">
+        {/* Navigation Links */}
+        <div className="hidden md:flex">
           <ul className="flex text-sm">
-            {/* Navigation links with borders for separation */}
             <Link href={"/"} className="px-4 border-r-2 border-slate-600">Find a Store</Link>
             <Link href={"/"} className="px-4 border-r-2 border-slate-600">Help</Link>
             <Link href={"/"} className="px-4 border-r-2 border-slate-600">Join Us</Link>
@@ -27,20 +26,19 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 2nd header div: Contains the second section with branding and category links */}
-      <div className="px-[50px] h-[60px] flex items-center justify-between">
+      {/* 2nd Header Div: Main Navigation */}
+      <div className="px-4 md:px-[50px] h-[60px] flex items-center justify-between bg-white">
 
-        {/* Left div: Displays the secondary logo */}
+        {/* Logo Section */}
         <div>
           <Link href={"/"}>
             <Image src={"/logo2.png"} alt="Logo2" width={59} height={21} />
           </Link>
         </div>
 
-        {/* Center div: Contains the main category links */}
-        <div>
+        {/* Main Links */}
+        <div className="hidden md:flex">
           <ul className="flex gap-5">
-            {/* Links for main categories like "New & Featured", "Men", etc. */}
             <Link href={"/"}>New & Featured</Link>
             <Link href={"/"}>Men</Link>
             <Link href={"/"}>Women</Link>
@@ -50,20 +48,25 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* 3rd div: Contains search input and icons (like wishlist and shopping bag) */}
-        <div className="flex items-center gap-3">
-
-          {/* Search box with icon and input field */}
-          <div className="flex items-center relative">
-            <Image src={"/search.png"} height={24} width={24} alt="Search" className="absolute left-[10px] cursor-pointer" />
+        {/* Search and Icons */}
+        <div className="flex items-center gap-3 w-full md:w-auto">
+          {/* Search Bar */}
+          <div className="flex items-center relative w-full md:w-auto">
+            <Image
+              src={"/search.png"}
+              height={24}
+              width={24}
+              alt="Search"
+              className="absolute left-2 cursor-pointer"
+            />
             <input
               type="text"
               placeholder="Search"
-              className="bg-[#efeeee] p-2 pl-10 rounded-full outline-none"
+              className="bg-[#efeeee] p-2 pl-10 rounded-full outline-none w-full md:w-auto"
             />
           </div>
 
-          {/* Right div: Contains icons for wishlist and shopping bag */}
+          {/* Icons */}
           <div className="flex gap-3">
             <Link href={"/"}>
               <Image src={"/heart.png"} height={24} width={24} alt="Heart" />
@@ -73,6 +76,18 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="block md:hidden bg-[#f5f5f5] px-4 py-2">
+        <ul className="flex flex-col gap-2 text-sm">
+          <Link href={"/"} className="block">New & Featured</Link>
+          <Link href={"/"} className="block">Men</Link>
+          <Link href={"/"} className="block">Women</Link>
+          <Link href={"/"} className="block">Kids</Link>
+          <Link href={"/"} className="block">Sales</Link>
+          <Link href={"/"} className="block">SNKRS</Link>
+        </ul>
       </div>
     </header>
   );
