@@ -3,109 +3,124 @@ import Link from "next/link";
 
 export default function Product() {
   return (
-    <div className="px-5 py-5 sm:px-8 lg:px-12">
-
-      {/* Top Section */}
-      <div className="flex flex-col sm:flex-row justify-between pb-10 gap-4">
-        <h1 className="font-bold text-lg sm:text-xl">New (500)</h1>
-
-        <div className="flex flex-wrap items-center gap-4">
+    <div className="px-4 md:px-10 lg:px-16 py-5">
+      {/* Top Div */}
+      <div className="flex justify-between items-center pb-10">
+        <h1 className="font-bold text-xl">New (500)</h1>
+        <div className="flex items-center gap-5">
           <div className="flex items-center gap-2">
             <p>Hide Filters</p>
             <Image src="/lines.png" alt="Lines" width={24} height={24} />
           </div>
-
           <div className="flex items-center gap-2">
             <p>Sort By</p>
-            <Image src="/down-arrow.png" alt="Arrow" width={14} height={14} />
+            <Image src="/down-arrow.png" alt="Sort Icon" width={14} height={14} />
           </div>
         </div>
       </div>
 
-      {/* Main Content Section */}
+      {/* Bottom Div */}
       <div className="flex flex-col lg:flex-row gap-6">
-
-        {/* Left Sidebar */}
-        <div className="flex flex-col lg:flex-row gap-6">
-
+        {/* Left Div */}
+        <div className="flex flex-col md:flex-row gap-5">
           {/* Filters */}
           <div className="space-y-5 text-sm">
-            {/* Categories */}
+            {/* Category Filter */}
             <div>
               <ul className="flex flex-col gap-3 font-semibold">
-                {[
-                  "Shoes",
-                  "Sports",
-                  "Tops & T-Shirts",
-                  "Hoodies & Sweatshirts",
-                  "Jackets",
-                  "Shorts",
-                  "Tracksuits",
-                  "Jumpsuits & Rompers",
-                  "Skirts & Dresses",
-                  "Socks",
-                  "Accessories & Equipment",
-                ].map((category, index) => (
-                  <li key={index}>
-                    <Link href="/">{category}</Link>
-                  </li>
-                ))}
+                <li>
+                  <Link href="/">Shoes</Link>
+                </li>
+                <li>
+                  <Link href="/">Sports</Link>
+                </li>
+                <li>
+                  <Link href="/">Tops & T-Shirts</Link>
+                </li>
+                <li>
+                  <Link href="/">Hoodies & Sweatshirts</Link>
+                </li>
+                <li>
+                  <Link href="/">Jackets</Link>
+                </li>
+                <li>
+                  <Link href="/">Shorts</Link>
+                </li>
+                <li>
+                  <Link href="/">Tracksuits</Link>
+                </li>
+                <li>
+                  <Link href="/">Jumpsuits & Rompers</Link>
+                </li>
+                <li>
+                  <Link href="/">Skirts & Dresses</Link>
+                </li>
+                <li>
+                  <Link href="/">Socks</Link>
+                </li>
+                <li>
+                  <Link href="/">Accessories & Equipment</Link>
+                </li>
               </ul>
             </div>
 
             {/* Gender Filter */}
-            <FilterSection title="Gender" items={["Men", "Women", "Unisex"]} />
+            <div>
+              <div className="flex justify-between items-center">
+                <p className="font-bold pb-3">Gender</p>
+                <Image src="/up-arrow.png" alt="Arrow" width={14} height={14} />
+              </div>
+              <div className="space-y-2">
+                {["Men", "Women", "Unisex"].map((gender) => (
+                  <div key={gender} className="flex items-center gap-2">
+                    <div className="h-5 w-5 border-2 cursor-pointer border-gray-300"></div>
+                    <p>{gender}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-            {/* Kids Filter */}
-            <FilterSection title="Kids" items={["Boys", "Girls"]} />
-
-            {/* Price Filter */}
-            <FilterSection
-              title="Shop By Price"
-              items={["Under ₹ 2,500.00", "₹ 2,501.00 - ₹ 7,500.00"]}
-            />
+            {/* Shop By Price */}
+            <div>
+              <div className="flex justify-between items-center">
+                <p className="font-bold pb-3">Shop By Price</p>
+                <Image src="/up-arrow.png" alt="Arrow" width={14} height={14} />
+              </div>
+              <div className="space-y-2">
+                {["Under ₹ 2 500.00", "₹ 2 501.00 - ₹ 7 500.00"].map((price) => (
+                  <div key={price} className="flex items-center gap-2">
+                    <div className="h-5 w-5 border-2 cursor-pointer border-gray-300"></div>
+                    <p>{price}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Divider */}
-          <div className="hidden lg:block cursor-pointer bg-slate-200">
-            <Image src="/line1.png" alt="" height={850} width={11} />
-          </div>
+          <div className="hidden lg:block w-1 bg-gray-200"></div>
         </div>
 
-        {/* Product Grid */}
-        <div className="w-full lg:w-[80%] space-y-10">
-          {[1, 2, 3, 4].map((row) => (
+        {/* Right Div */}
+        <div className="flex-1 space-y-16">
+          {/* Product Rows */}
+          {Array.from({ length: 2 }).map((_, rowIndex) => (
             <div
-              key={row}
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+              key={rowIndex}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
             >
-              {[
-                {
-                  image: "/item1.png",
-                  label: "Just In",
-                  title: "Nike Air Force 1 Mid '07",
-                  description: "Men's Shoes",
-                  color: "1 Color",
-                  price: "₹ 10,795.00",
-                },
-                {
-                  image: "/item2.png",
-                  label: "Just In",
-                  title: "Nike Court Vision Low Next Nature",
-                  description: "Men's Shoes",
-                  color: "1 Color",
-                  price: "₹ 4,995.00",
-                },
-                {
-                  image: "/item3.png",
-                  label: "Just In",
-                  title: "Nike Air Force 1 PLT.AF.ORM",
-                  description: "Women's Shoes",
-                  color: "1 Color",
-                  price: "₹ 8,695.00",
-                },
-              ].map((product, index) => (
-                <ProductCard key={index} product={product} />
+              {/* Sample Product */}
+              {[1, 2, 3].map((item) => (
+                <div key={item} className="space-y-3 cursor-pointer">
+                  <Image src={`/item${item}.png`} alt={`Item ${item}`} width={300} height={300} />
+                  <p className="text-red-500">Just In</p>
+                  <div>
+                    <p className="font-bold">Nike Air Force 1 Mid '07</p>
+                    <p className="text-gray-500">Men's Shoes</p>
+                    <p className="text-gray-500">1 Color</p>
+                  </div>
+                  <p>MRP: ₹ 10,795.00</p>
+                </div>
               ))}
             </div>
           ))}
@@ -114,34 +129,3 @@ export default function Product() {
     </div>
   );
 }
-
-const FilterSection = ({ title, items }) => (
-  <div>
-    <div className="flex justify-between items-center">
-      <p className="font-bold pb-3">{title}</p>
-      <Image src="/up-arrow.png" alt="Toggle" width={14} height={14} />
-    </div>
-
-    <div className="space-y-2">
-      {items.map((item, index) => (
-        <div key={index} className="flex gap-1 items-center">
-          <p className="h-[20px] w-[20px] border-2 cursor-pointer border-[#D9D9D9]"></p>
-          <p>{item}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-const ProductCard = ({ product }) => (
-  <div className="space-y-3 cursor-pointer">
-    <Image src={product.image} alt="Product" width={300} height={300} />
-    <p className="text-red-500">{product.label}</p>
-    <div>
-      <p className="font-bold">{product.title}</p>
-      <p className="text-[#757575]">{product.description}</p>
-      <p className="text-[#757575]">{product.color}</p>
-    </div>
-    <p>{product.price}</p>
-  </div>
-);
