@@ -115,8 +115,8 @@ export default function Product() {
                   <Image src={`/item${item}.png`} alt={`Item ${item}`} width={300} height={300} />
                   <p className="text-red-500">Just In</p>
                   <div>
-                    <p className="font-bold">Nike Air Force 1 Mid '07</p>
-                    <p className="text-gray-500">Men's Shoes</p>
+                    <p className="font-bold">Nike Air Force 1 Mid 07</p>
+                    <p className="text-gray-500">Mens Shoes</p>
                     <p className="text-gray-500">1 Color</p>
                   </div>
                   <p>MRP: ₹ 10,795.00</p>

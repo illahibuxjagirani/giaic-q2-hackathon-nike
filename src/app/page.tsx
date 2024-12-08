@@ -57,7 +57,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div>
                 <h1 className="font-bold">Nike Air Max Pulse</h1>
-                <p className="text-[#757575]">Men's Shoes</p>
+                <p className="text-[#757575]">Mens Shoes</p>
               </div>
               <p className="font-bold">₹ 13 995</p>
             </div>
@@ -69,7 +69,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div>
                 <h1 className="font-bold">Nike Air Max 97 SE</h1>
-                <p className="text-[#757575]">Men's Shoes</p>
+                <p className="text-[#757575]">Mens Shoes</p>
               </div>
               <p className="font-bold">₹ 16 995</p>
             </div>
@@ -81,7 +81,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div>
                 <h1 className="font-bold">Nike Air Max SYSTM</h1>
-                <p className="text-[#757575]">Women's Shoes</p>
+                <p className="text-[#757575]">Womens Shoes</p>
               </div>
               <p className="font-bold">₹ 11 995</p>
             </div>
@@ -113,7 +113,7 @@ export default function Home() {
         <div className="flex justify-between items-center font-semibold">
           <div className="flex gap-4 items-center w-[75%] ml-auto justify-between px-6">
             <div className="flex items-center gap-3">
-              <p>Shop Men's</p>
+              <p>Shop Mens</p>
               <div className="flex gap-2">
                 <Image src={"/left-arrow.png"} alt="Left Arrow" width={48} height={48} className="cursor-pointer" />
                 <Image src={"/right-arrow.png"} alt="Right Arrow" width={48} height={48} className="cursor-pointer" />
@@ -121,7 +121,7 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-3">
-              <p>Shop Women's</p>
+              <p>Shop Womens</p>
               <div className="flex gap-2">
                 <Image src={"/left-arrow.png"} alt="Left Arrow" width={48} height={48} className="cursor-pointer" />
                 <Image src={"/right-arrow.png"} alt="Right Arrow" width={48} height={48} className="cursor-pointer" />
@@ -138,7 +138,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div className="text-sm">
                 <h1 className="font-bold">Nike Dri-FIT ADV TechKnit Ultra</h1>
-                <p className="text-[#757575]">Men's Short-Sleeve</p>
+                <p className="text-[#757575]">Mens Short-Sleeve</p>
                 <p className="text-[#757575]">Running Top</p>
               </div>
               <p className="font-bold">₹ 3895</p>
@@ -151,7 +151,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div className="text-sm">
                 <h1 className="font-bold">Nike Dri-FIT Challenger</h1>
-                <p className="text-[#757575]">Men's 18cm (approx.)</p>
+                <p className="text-[#757575]">Mens 18cm (approx.)</p>
                 <p className="text-[#757575]">2-in-1 Versatile Shorts</p>
               </div>
               <p className="font-bold">₹ 2 495</p>
@@ -164,7 +164,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div className="text-sm">
                 <h1 className="font-bold">Nike Dri-FIT ADV Run Division</h1>
-                <p className="text-[#757575]">Women's Long-Sleeve</p>
+                <p className="text-[#757575]">Womens Long-Sleeve</p>
                 <p className="text-[#757575]">Running Top</p>
               </div>
               <p className="font-bold">₹ 5 295</p>
@@ -177,7 +177,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div className="text-sm">
                 <h1 className="font-bold">Nike Fast</h1>
-                <p className="text-[#757575]">Women's Mid-Rise 7/8 Running</p>
+                <p className="text-[#757575]">Womens Mid-Rise 7/8 Running</p>
                 <p className="text-[#757575]">Leggings with Pockets</p>
               </div>
               <p className="font-bold">₹ 3 795</p>
@@ -188,7 +188,7 @@ export default function Home() {
 
       {/* Sixth Section: Featured Collection */}
       <div className="px-[50px] space-y-5 py-5">
-        <p className="font-semibold">Don't Miss</p>
+        <p className="font-semibold">Dont Miss</p>
         <div>
           <Image src={"/image3.png"} alt="Image" width={1344} height={700} />
         </div>
@@ -244,12 +244,12 @@ export default function Home() {
           </div>
 
           <div className="space-y-4">
-            <h1 className="font-bold">Kids'</h1>
+            <h1 className="font-bold">Kids</h1>
             <ul className="flex flex-col gap-3 text-[#757575]">
               <Link href={"/"}>Infant & Toddler Shoes</Link>
-              <Link href={"/"}>Kids' Shoes</Link>
-              <Link href={"/"}>Kids' Jordon Shoes</Link>
-              <Link href={"/"}>Kids' Basketball Shoes</Link>
+              <Link href={"/"}>Kids Shoes</Link>
+              <Link href={"/"}>Kids Jordon Shoes</Link>
+              <Link href={"/"}>Kids Basketball Shoes</Link>
             </ul>
           </div>
         </div>
